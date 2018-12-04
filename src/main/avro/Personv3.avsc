@@ -1,0 +1,49 @@
+{
+  "name": "Person",
+  "namespace": "fr.fonctiere.schema.person",
+  "type": "record",
+  "fields": [
+    {
+      "name": "id",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "firstName",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "secondName",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "age",
+      "type": "int",
+      "default": -1
+    },
+    {
+      "name": "continent",
+      "type": {
+        "type": "enum",
+        "name": "Continent",
+        "symbols": [
+          "EUROPE",
+          "AMERICA",
+          "AFRICA"
+        ]
+      },
+      "default": "AFRICA"
+    }
+  ]
+}
