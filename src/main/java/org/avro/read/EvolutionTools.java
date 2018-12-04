@@ -83,7 +83,7 @@ public class EvolutionTools {
         Schema readerSchema = parserreader.parse(new File(basePath+readerVersion +".avsc"));
         Schema writerSchema = parserwriter.parse(new File(basePath+writerVersion+".avsc"));
         SchemaCompatibility.SchemaPairCompatibility compatibilityChecker =  SchemaCompatibility.checkReaderWriterCompatibility(readerSchema, writerSchema);
-        logger.info("compatibility check is : " + compatibilityChecker.getType().toString());
+        System.out.println("compatibility check is : " + compatibilityChecker.getType().toString());
     }
 
 }

@@ -9,8 +9,7 @@ public class AvroReader {
  private static final Logger logger = LoggerFactory.getLogger(AvroReader.class);
   public static void main(String... args)     throws Throwable{
 
-   writeAvro("v1");
-   readPersonAvro("v1");
+   checkCompatibility("v1", "v0");
   }
 
 
