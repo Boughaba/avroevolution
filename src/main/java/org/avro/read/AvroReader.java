@@ -9,9 +9,9 @@ public class AvroReader {
  private static final Logger logger = LoggerFactory.getLogger(AvroReader.class);
   public static void main(String... args)     throws Throwable{
 
-   checkCompatibility("v1", "v2");
-   checkCompatibility("v3", "v2");
-   checkCompatibility("v2", "v3");
+   checkCompatibility("v4", "v3");
+   checkCompatibility("v5", "v4");
+   checkCompatibility("v4", "v5");
   }
 
 
