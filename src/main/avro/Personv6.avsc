@@ -1,0 +1,120 @@
+{
+  "name": "Person",
+  "namespace": "fr.fonctiere.schema.person",
+  "type": "record",
+  "fields": [
+    {
+      "name": "identifier",
+      "aliases" : ["id"],
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "firstName",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "secondName",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "age",
+      "type": "int",
+      "default": -1
+    },
+    {
+      "name": "continent",
+      "type": {
+        "type": "enum",
+        "name": "Continent",
+        "symbols": [
+          "EUROPE",
+          "AMERICA",
+          "AFRICA"
+        ]
+      },
+      "default": "AFRICA"
+    },
+{
+      "name": "logement",
+      "type": [
+        "null",
+        {
+          "name": "Appartement",
+          "type": "record",
+          "fields": [
+            {
+              "name": "adresse",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "etage",
+              "type": "int",
+              "default": -1
+            }
+          ]
+        },
+        {
+          "name": "Villa",
+          "type": "record",
+          "fields": [
+            {
+              "name": "adresse",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "type",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            }
+          ]
+        },
+        {
+          "name": "Hotel",
+          "type": "record",
+          "fields": [
+            {
+              "name": "adresse",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "room",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            }
+          ]
+        }
+      ],
+      "default": null
+    }
+  ]
+}
